@@ -1,0 +1,7 @@
+<br><br>
+<button class="clear"
+(click)="toggleLog()">{{ messageService.logEnabled ? 'Disable Log' : 'Enable Log'}}</button>
+<hr>
+<div *ngIf="messageService.logEnabled">
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+</div>

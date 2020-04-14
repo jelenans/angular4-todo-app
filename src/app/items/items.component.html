@@ -1,0 +1,18 @@
+<br>
+<div *ngFor="let item of items">
+  <a
+  routerLink="/detail/{{item.id}}">
+      <h4>{{item.name}}</h4>
+  </a>
+  <button title="delete item"
+  (click)="deleteItem(item)">x</button>
+</div>
+<br>
+<div>
+  <h4>Item Name:</h4>
+  <input #itemName
+  placeholder="Enter item name"/>
+  <button (click)="addItem(itemName.value); itemName.value=''">
+    Add
+  </button>
+</div>
